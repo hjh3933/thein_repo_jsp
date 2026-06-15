@@ -1,0 +1,113 @@
+# =========================================================
+# Java Project .gitignore
+# Eclipse / IntelliJ / VSCode / Maven / Gradle 공용
+# =========================================================
+
+# =========================
+# Java
+# =========================
+*.class
+*.log
+*.ctxt
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# JVM Crash Logs
+hs_err_pid*
+replay_pid*
+
+# =========================
+# Build Directory
+# =========================
+/target/
+/build/
+/bin/
+/out/
+
+# =========================
+# Maven
+# =========================
+.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# Gradle
+# =========================
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# =========================
+# Eclipse
+# =========================
+.metadata/
+.classpath
+.project
+.settings/
+.loadpath
+.recommenders/
+
+# Spring Tool Suite
+.springBeans4
+
+# Code Recommenders
+.recommenders/
+
+# =========================
+# IntelliJ IDEA
+# =========================
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# =========================
+# VSCode
+# =========================
+.vscode/
+
+# =========================
+# Mac / Linux / Windows
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Environment
+# =========================
+.env
+.env.*
+
+# =========================
+# Database
+# =========================
+*.db
+*.sqlite
+
+# =========================
+# Node (React/Vue 연결 시)
+# =========================
+node_modules/
+
+# =========================
+# Lombok
+# =========================
+.lombok/
+
+# =========================
+# Temp Files
+# =========================
+*.tmp
+*.temp
+
+*.sql
