@@ -1,0 +1,18 @@
+.root {
+  border: 1px solid black;
+  padding: 20px;
+  width: 1000px;
+  margin: auto;
+}
+h1,
+p {
+  margin: 0;
+}
+.top-menu {
+}
+.tit {
+  margin: 50px 0 50px 70px;
+}
+section > h3 {
+  text-align: center;
+}
