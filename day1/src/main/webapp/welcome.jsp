@@ -1,29 +1,41 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date" %>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <title>welcome</title>
-    <script src="https://kit.fontawesome.com/fe7d9866b2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./welcome.css">
   </head>
   <body>
     <div class="root">
-    <%! 
-    String greeting = "Welcome to Book Shopping Mall";
-    String tagline = "Welcome to Web Market!"; 
-    %>
+    <%! String greeting = "도서 쇼핑몰에 오신 것을 환영합니다."; String tagline = "Welcome to Web Market!"; %>
     <header>
-      <div class="top-menu">
-        <i class="fa-solid fa-house"></i>HOME
-      </div>
+      <%@ include file="menu.jsp" %>
       <div class="tit">
         <h1><%= greeting %></h1>
     <p>BookMarket</p>
       </div>
     </header>
-    <section><h3><%= tagline %></h3></section>
-    <footer>&copy;BookMarket</footer>
+    <section>
+      <h3><%= tagline %></h3>
+      <% 
+        Date day = new java.util.Date();
+        String am_pm;
+        int hour=day.getHours();
+        int minute=day.getMinutes();
+        int second=day.getSeconds();
+        if(hour/12==0) {
+          am_pm = "AM";
+        } else {
+          am_pm = "PM";
+          hour=hour-12;
+        }
+        String CT = hour + ":"+minute+":"+second+" "+am_pm;
+        out.println("현재 접속 시각: "+CT+"\n");
+      %>
+    </section>
+    <%@ include file="footer.jsp" %>
     </div>
 </html>
