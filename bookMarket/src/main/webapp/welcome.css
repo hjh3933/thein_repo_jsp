@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  color: black;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+i {
+  margin-right: 5px;
+}
+.root {
+  padding: 0 20px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.top-menu {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px dotted black;
+}
+h1,
+p {
+  margin: 0;
+}
+.tit {
+  padding: 70px 0 70px 70px;
+  background-color: rgb(237, 237, 237);
+  margin-top: 15px;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+}
+.welcome_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 세로 중앙 정렬 */
+  align-items: center;     /* 가로 중앙 정렬 */
+  margin: auto;            /* 남는 공간을 계산해 완벽한 중앙으로 배치 */
+  gap: 10px;               /* 텍스트 사이 간격 */
+}
+footer {
+  border-top: 1px dotted black;
+  height: 50px;
+  line-height: 50px;
+}
