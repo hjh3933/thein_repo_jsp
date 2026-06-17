@@ -1,15 +1,15 @@
+<%@page import="dao.BookRepository"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.Book"%>
-<jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" />
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8" />
 <title>books</title>
-<link rel="stylesheet" href="./welcome.css" />
-<link rel="stylesheet" href="./books.css" />
+<link rel="stylesheet" href="./resources/css/welcome.css" />
+<link rel="stylesheet" href="./resources/css/books.css" />
 </head>
 <body>
 	<div class="root">
@@ -24,7 +24,8 @@
 		<section>
 			<div class="books-container">
 				<%
-				ArrayList<Book> listOfBooks = bookDAO.getAllBooks();
+				BookRepository dao = BookRepository.getInstance();
+				ArrayList<Book> listOfBooks = dao.getAllBooks();
 				%>
 				<div class="books-box">
 					<%
@@ -33,12 +34,17 @@
 					%>
 					<div class="book-box">
 						<div class="book">
+							<img alt="" src="./resources/images/<%=book.getFilename()%>">
+							<p><%=book.getFilename()%></p>
 							<h5><%=book.getName()%></h5>
 							<p><%=book.getAuthor()%></p>
 							<p><%=book.getPublisher()%>
 								|
 								<%=book.getReleaseDate()%></p>
-							<p class="desc"><%=book.getDescription().substring(0, 60)%>...
+							<p class="desc">
+								<%=book.getDescription() != null && book.getDescription().length() > 60
+		? book.getDescription().substring(0, 60) + "..."
+		: book.getDescription()%>
 							</p>
 							<p><%=book.getUnitPrice()%>원
 							</p>

@@ -4,20 +4,21 @@
   flex-direction: column;
   flex: 1; /* ★ 중요: 타이틀과 푸터 사이의 남는 세로 공간을 꽉 채웁니다 */
   justify-content: center; /* ★ 중요: 남는 세로 공간의 '한가운데'로 자식들을 정렬합니다 */
+  padding: 10px 0;
 }
 .books-box {
   display: flex;
-  justify-content: space-around;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .book-box {
+	width: calc((100% - 40px) / 3);
   text-align: center;
   display: flex;
   flex-direction: column;
   /* justify-content: center; <- 내부에 높이가 없으므로 지우거나 아래 속성으로 대체 */
   align-items: center; /* 내용물들을 가로 축 기준으로 정중앙 정렬 */
-  flex: 1; /* 도서 카드 3개의 너비를 균등하게 배치 */
 }
 
 .desc {
@@ -40,4 +41,8 @@
   &:hover {
     background-color: rgb(98, 98, 98);
   }
+}
+.book img {
+	width: 150px;
+	heigth: 200px;
 }

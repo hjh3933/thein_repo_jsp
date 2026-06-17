@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8" />
 <title>welcome</title>
-<link rel="stylesheet" href="./welcome.css">
+<link rel="stylesheet" href="./resources/css/welcome.css">
 </head>
 <body>
 	<div class="root">
