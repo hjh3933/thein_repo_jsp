@@ -32,7 +32,11 @@
 	justify-content: center;
 	padding: 5px 0;
 }
-
+.addBook-container > .text-end:first-child {
+    margin-left: auto; 
+    text-align: right;
+    margin-right: 10px;
+}
 .addBook-container>form {
 	display: flex;
 	flex-direction: column;
@@ -53,7 +57,7 @@
 	gap: 4px;
 }
 
-.col>.inp_box>input:not([type="submit"]) {
+.col>.inp_box>input:not([type="button"]) {
 	height: 30px;
 	padding: 5px;
 	line-height: 30px;

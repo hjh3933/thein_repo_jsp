@@ -35,7 +35,6 @@
 					<div class="book-box">
 						<div class="book">
 							<img alt="" src="./resources/images/<%=book.getFilename()%>">
-							<p><%=book.getFilename()%></p>
 							<h5><%=book.getName()%></h5>
 							<p><%=book.getAuthor()%></p>
 							<p><%=book.getPublisher()%>
