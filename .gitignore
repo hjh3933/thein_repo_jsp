@@ -2,7 +2,7 @@
 # Java Project .gitignore
 # Eclipse / IntelliJ / VSCode / Maven / Gradle 공용
 # =========================================================
-
+/Servers2/
 # =========================
 # Java
 # =========================
@@ -109,5 +109,3 @@ node_modules/
 # =========================
 *.tmp
 *.temp
-
-*.sql
