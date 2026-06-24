@@ -1,0 +1,11 @@
+<web-app>
+    <error-page>
+        <!-- <error-code>500</error-code>
+        <location>/ch11/errorCode_error.jsp</location> -->
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/ch11/exceptionType_error.jsp</location>
+    </error-page>
+    <!-- 6월 25일 여기부터 -->
+    <filter></filter>
+    <filter-mapping></filter-mapping>
+</web-app>
