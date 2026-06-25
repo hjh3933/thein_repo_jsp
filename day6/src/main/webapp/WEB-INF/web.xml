@@ -6,6 +6,20 @@
         <location>/ch11/exceptionType_error.jsp</location>
     </error-page>
     <!-- 6월 25일 여기부터 -->
-    <filter></filter>
-    <filter-mapping></filter-mapping>
+    <filter>
+        <filter-name>Filter02</filter-name>
+        <filter-class>ch12.com.filter.InitParamFilter</filter-class>
+    </filter>
+    <init-param>
+        <param-name>param1</param-name>
+        <param-value>admin</param-value>
+    </init-param>
+    <init-param>
+        <param-name>param2</param-name>
+        <param-value>1234</param-value>
+    </init-param>
+    <filter-mapping>
+        <filter-name>Filter02</filter-name>
+        <url-pattern>/ch12/filter02_process.jsp</url-pattern>
+    </filter-mapping>
 </web-app>

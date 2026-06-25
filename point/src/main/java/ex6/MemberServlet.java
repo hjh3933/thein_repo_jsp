@@ -33,6 +33,7 @@ public class MemberServlet extends HttpServlet {
 				int viewId = Integer.parseInt(req.getParameter("id"));
 				MemberVO member = dao.get(viewId);
 				req.setAttribute("member", member);
+				// 값을 가져가기 위해 forward 사용, redirect는 값을 들고가진 못함
 				forward(req, resp, "/ex6/view.jsp");
 				break;
 			}
@@ -92,6 +93,7 @@ public class MemberServlet extends HttpServlet {
 
 	private void forward(HttpServletRequest req, HttpServletResponse resp, String path)
 			throws ServletException, IOException {
+		// redirect와 forward를 같이 쓰는 경우
 		req.getRequestDispatcher(path).forward(req, resp);
 	}
 }
